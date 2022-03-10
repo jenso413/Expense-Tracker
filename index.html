@@ -13,31 +13,37 @@
         <h2>Add a New Item: </h2>
     </div>
     <div class="label-container">
-        <div>
+        <div class="name-container">
             <label for="name">Name: </label>
             <input type="text" id="name" placeholder="Where was the expense made?">
         </div>
-        <div>
-            <label for="date">Date: </label>
-            <input type="date" id="date">
+        <div class="date-amount-container">
+            <div>
+                <label for="date">Date: </label>
+                <input type="date" id="date">
+            </div>
+            <div>
+                <label for="amount">Amount: </label>
+                <input type="text" id="amount">
+            </div>
         </div>
-        <div>
-            <label for="amount">Amount: </label>
-            <input type="text" id="amount">
-        </div>
-        <button>Add Expense</button>
     </div>
+    <button id="add-expense">Add Expense</button>
     <table>
-        <tr>
-            <th>Name</th>
-            <th>Date</th>
-            <th>Amount</th>
-        </tr>
-        <tr>
-            <td>Name example</td>
-            <td>Date example</td>
-            <td>Amount example</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Name example</td>
+                <td>Date example</td>
+                <td>Amount example</td>
+            </tr>
+        </tbody>
     </table>
 
     <script src="app.js"></script>

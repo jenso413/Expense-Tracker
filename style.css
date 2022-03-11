@@ -113,3 +113,7 @@ th, td {
 tbody {
     background-color: rgb(245,244,246);
 }
+
+.center {
+    text-align: center;
+}

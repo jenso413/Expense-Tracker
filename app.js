@@ -1,8 +1,10 @@
-let expense = document.getElementById('name');
-let date = document.getElementById('date');
-let amount = document.getElementById('amount');
+const expense = document.getElementById('name');
+const date = document.getElementById('date');
+const amount = document.getElementById('amount');
+const remove = document.getElementById('delete');
 
-let tableBody = document.getElementById('table-body')
+
+const tableBody = document.getElementById('table-body')
 
 document.getElementById('add-expense').addEventListener('click', function() {
     // Create new Row
@@ -15,16 +17,24 @@ document.getElementById('add-expense').addEventListener('click', function() {
     let newName = document.createElement('td');
     let newDate = document.createElement('td');
     let newAmount = document.createElement('td');
+    let removeItem = document.createElement('td');
 
     // Add input values as text content of td's
     newName.textContent = expense.value;
     newDate.textContent = date.value;
     newAmount.textContent = amount.value;
 
+    // Add delete icon as content of remove td
+    removeItem.innerHTML = '<i class="fas fa-times"></i>'
+
+    // Add center class to icon in td
+    removeItem.classList.add('center')
+
     // Append td's to the new row
     newRow.appendChild(newName);
     newRow.appendChild(newDate);
     newRow.appendChild(newAmount);
+    newRow.appendChild(removeItem);
 
     // Clear inputs
     expense.value = '';

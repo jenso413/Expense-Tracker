@@ -40,5 +40,12 @@ document.getElementById('add-expense').addEventListener('click', function() {
     expense.value = '';
     date.value = '';
     amount.value = '';
+
+    // Adding event listener to delete button. Need to do it here because removeItem is not global
+    removeItem.addEventListener('click', function() {
+        // Removes table row on click
+        this.parentElement.remove();
+    })
     
 })
+
